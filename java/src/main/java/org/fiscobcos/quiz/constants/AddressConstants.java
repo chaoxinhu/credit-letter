@@ -16,4 +16,6 @@ public class AddressConstants {
     public static final String CONTRACT_ADDRESS_FILE_NAME = "config/address.properties";
     
     public static final String FACTORY_NAME = "address.factory";
+
+    public static final String DEFAULT_READ_PRIVATE_KEY = "11111";
 }

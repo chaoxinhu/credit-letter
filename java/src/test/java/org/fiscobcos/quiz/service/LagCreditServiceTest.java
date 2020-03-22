@@ -44,47 +44,47 @@ public class LagCreditServiceTest extends BaseTest {
     private String toAddr = "0x015e68c28690b3250b36319d7c04653e0fbc4f26";
     
     static private String creditAddr = "";
-    
-    @Test
-    public void testAdeploy(){
-        log.info("----test deploy---");
-        LAGCredit lagCredit = creditLetterService.deploy();
-        log.info("deploy LAGCredit address : {}", lagCredit);
-        creditAddr = lagCredit.getContractAddress();
-    }
-
-    @Test
-    public void testBLoad(){
-        log.info("----test load---");
-        LAGCredit lagCredit = creditLetterService.load(creditAddr);
-        log.info("load LAGCredit address : {}", lagCredit.getContractAddress());
-    }
-
-    @Test
-    public void testCTransfer(){
-        log.info("----test transfer---");
-        boolean flag = creditLetterService.transfer(creditAddr, toAddr, new BigInteger("1000"));
-        if(flag){
-            log.info("transfer 1000 success!");
-        }else{
-            log.info("transfer failed!");
-        }
-    }
-
-    @Test
-    public void testDGetBalanceByOwner() throws Exception{
-        log.info("----test getBalance---");
-        long balance = creditLetterService.getBalanceByOwner(creditAddr, owner);
-        log.info("the owner : {}, balance : {}", owner, balance);
-        long tobalance = creditLetterService.getBalanceByOwner(creditAddr, toAddr);
-        log.info("the to : {}, balance : {}", toAddr, tobalance);
-    }
-
-    @Test
-    public void testEGetTotalSupply() throws Exception{
-        log.info("----test getTotalSupply---");
-        long total = creditLetterService.getTotalSupply(creditAddr);
-        log.info("total : {}", total);
-    }
+//
+//    @Test
+//    public void testAdeploy(){
+//        log.info("----test deploy---");
+//        LAGCredit lagCredit = creditLetterService.deploy();
+//        log.info("deploy LAGCredit address : {}", lagCredit);
+//        creditAddr = lagCredit.getContractAddress();
+//    }
+//
+//    @Test
+//    public void testBLoad(){
+//        log.info("----test load---");
+//        LAGCredit lagCredit = creditLetterService.load(creditAddr);
+//        log.info("load LAGCredit address : {}", lagCredit.getContractAddress());
+//    }
+//
+//    @Test
+//    public void testCTransfer(){
+//        log.info("----test transfer---");
+//        boolean flag = creditLetterService.transfer(creditAddr, toAddr, new BigInteger("1000"));
+//        if(flag){
+//            log.info("transfer 1000 success!");
+//        }else{
+//            log.info("transfer failed!");
+//        }
+//    }
+//
+//    @Test
+//    public void testDGetBalanceByOwner() throws Exception{
+//        log.info("----test getBalance---");
+//        long balance = creditLetterService.getBalanceByOwner(creditAddr, owner);
+//        log.info("the owner : {}, balance : {}", owner, balance);
+//        long tobalance = creditLetterService.getBalanceByOwner(creditAddr, toAddr);
+//        log.info("the to : {}, balance : {}", toAddr, tobalance);
+//    }
+//
+//    @Test
+//    public void testEGetTotalSupply() throws Exception{
+//        log.info("----test getTotalSupply---");
+//        long total = creditLetterService.getTotalSupply(creditAddr);
+//        log.info("total : {}", total);
+//    }
 
 }
