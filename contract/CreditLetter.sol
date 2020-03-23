@@ -46,7 +46,7 @@ pragma solidity ^0.4.25;
         uint256 creditVal
     ) public {
         // 思考题：为什么要用tx.origin？
-        require (tx.origin == issuerVal, "Only issuer can issue his/her own letter");
+        require (tx.origin == issuerVal || tx.origin == acceptorVal, "Only issuer or acceptor can issue his/her own letter");
         issuer = issuerVal;
         holder = holderVal;
         acceptor = acceptorVal;
